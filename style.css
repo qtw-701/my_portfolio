@@ -1,2 +1,133 @@
-/* font-family: 'Josefin Sans', sans-serif; */
-/* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
+:root {
+  /* color */
+  --color-white: #ffffff;
+  --color-black: #222222;
+  --color-ligth-black: #333333;
+  --color-grey: #c4c4c4;
+  --color-light-grey: #eeeeee;
+  --color-blue: #67728c;
+  --color-yellow: #ffd79b;
+
+  /* font-size */
+  --font-super: 48px;
+  --font-large: 32px;
+  --font-medium: 24px;
+  --font-regular: 16px;
+  --font-small: 14px;
+
+  /* font-weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 500;
+  --weight-regular: 400;
+  --weight-light: 300;
+  --weight-thin: 100;
+
+  /* font-family */
+  --font-josefin: "Josefin Sans", sans-serif;
+  --font-spoqa: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+/* Universal */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-spoqa);
+  color: var(--color-ligth-black);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-super);
+  font-weight: var(--weight-bold);
+  font-family: var(--font-josefin);
+  color: var(--color-black);
+}
+
+h2 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+}
+
+p {
+  font-size: var(--font-regular);
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-blue);
+  font-family: var(--font-josefin);
+  color: var(--color-white);
+  padding: 8px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo i {
+  color: var(--color-yellow);
+  padding-right: 10px;
+}
+
+.navbar__menu {
+  display: flex;
+  font-size: var(--font-medium);
+}
+
+.navbar__menu__item {
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+/* Home */
+#home {
+  background: url(imgs/home__background.png) center/cover no-repeat;
+  color: var(--color-white);
+  padding: 40px;
+  padding-top: 120px;
+}
+
+.home__container {
+  text-align: center;
+}
+
+.profile {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+/* section */
+.section {
+  max-width: 1200px;
+  text-align: center;
+  margin: 100px 40px;
+}
