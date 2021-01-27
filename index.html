@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sojung's Portfolio</title>
+    <meta name="description" content="Sojung's portfolio" />
+    <meta name="author" content="Sojung Park" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/d1b51de8a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fas fa-moon"></i>
+        <a href="#">Sojung</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item">About me</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">My work</li>
+        <li class="navbar__menu__item">Contact me</li>
+      </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="home__container">
+        <img src="imgs/profile.png" alt="박소정의 프로필 사진입니다." />
+        <h1 class="home__title">
+          안녕하세요!<br />박소정의 포트폴리오에 오신 것을 환영합니다.
+        </h1>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="about__bubble__container">
+        <div class="about__bubble">성실하고 책임감 있어요!</div>
+        <div class="about__bubble">친화력 좋아요!</div>
+        <div class="about__bubble">
+          새로운 것은 빠르게 익히기 위해 노력해요!
+        </div>
+      </div>
+      <p class="about__description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ipsum
+        temporibus accusantium dolore aspernatur! Assumenda exercitationem
+        placeat recusandae harum vel sapiente libero consectetur ad, eius iure
+        blanditiis dignissimos enim perferendis.
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h2 class="major__title">HTML5</h2>
+          <p class="major__description">
+            html5로 웹 페이지의 골격을 잡을 수 있습니다.
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-css3"></i>
+          </div>
+          <h2 class="major__title">CSS3</h2>
+          <p class="major__description">
+            css3로 골격이 잡힌 웹 페이지에 스타일을 입힐 수 있습니다.
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <h2 class="major__title">JavaScript</h2>
+          <p class="major__description">
+            javascript로 정적인 페이지에 동적인 요소들을 추가할 수 있습니다.
+          </p>
+        </div>
+      </div>
+      <div class="about__schools">
+        <div class="school">
+          <img src="imgs/dima__logo.png" alt="동아방송예술대학교 로고" />
+          <p class="school__name">동아방송예술대학교 음향제작과 졸업</p>
+          <p class="school__period">2014/03 ~ 2017/02</p>
+        </div>
+        <div class="school">
+          <img src="imgs/ez_logo.jpg" alt="이젠 아카데미 로고" />
+          <p class="school__name">이젠 아카데미</p>
+          <p class="school__period">2020/05 ~ 2020/10</p>
+        </div>
+        <div class="school">
+          <img src="imgs/KNOU__logo.png" alt="한국방송통신대학교 로고" />
+          <p class="school__name">한국방송통신대학교 컴퓨터과학과 재학</p>
+          <p class="school__period">2021/03 ~</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h1>Skills</h1>
+      <div class="skillset">
+        <div class="skill__left">
+          <h3>skills</h3>
+        </div>
+        <div class="skill__right">
+          <h3>tools</h3>
+          <ul class="tools__list">
+            <li>Visual Studio Code</li>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Indesign</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- My work -->
+    <section id="work">
+      <h1>My Work</h1>
+      <div class="work__categories">
+        <button class="category__btn">All</button>
+      </div>
+      <div class="work__projects">
+        <div class="project"></div>
+        <div class="project"></div>
+        <div class="project"></div>
+      </div>
+    </section>
+
+    <!-- Contact me -->
+    <section id="contact">
+      <h1 class="contact__title">Contact Me</h1>
+      <h2 class="contact__email">
+        qkrthwjd95@gmail.com / qkrthwjd701@naver.com
+      </h2>
+      <div class="contact__link">
+        <a href="#">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="contact__rights">2021 Sojung Park - All rights reserved</p>
+    </section>
+  </body>
+</html>
