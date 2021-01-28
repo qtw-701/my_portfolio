@@ -3,15 +3,18 @@
   --color-white: #ffffff;
   --color-black: #222222;
   --color-ligth-black: #333333;
+  --color-dark-grey: #999999;
   --color-grey: #c4c4c4;
   --color-light-grey: #eeeeee;
   --color-blue: #67728c;
+  --color-orange: #ffb996;
   --color-yellow: #ffd79b;
 
   /* font-size */
   --font-super: 48px;
   --font-large: 32px;
   --font-medium: 24px;
+  --font-small-title: 18px;
   --font-regular: 16px;
   --font-small: 14px;
 
@@ -23,8 +26,8 @@
   --weight-thin: 100;
 
   /* font-family */
-  --font-josefin: "Josefin Sans", sans-serif;
-  --font-spoqa: "Spoqa Han Sans Neo", "sans-serif";
+  --font-josefin: 'Josefin Sans', sans-serif;
+  --font-spoqa: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
 /* Universal */
@@ -42,6 +45,10 @@ body {
 a {
   text-decoration: none;
   color: var(--color-white);
+}
+
+ul {
+  padding-left: 0;
 }
 
 li {
@@ -67,6 +74,10 @@ h2 {
   font-weight: var(--weight-bold);
 }
 
+h3 {
+  font-size: var(--font-small-title);
+}
+
 p {
   font-size: var(--font-regular);
 }
@@ -74,6 +85,7 @@ p {
 /* Navbar */
 #navbar {
   position: fixed;
+  z-index: 1;
   width: 100%;
   background-color: var(--color-blue);
   font-family: var(--font-josefin);
@@ -108,7 +120,7 @@ p {
 
 /* Home */
 #home {
-  background: url(imgs/home__background.png) center/cover no-repeat;
+  background: url(imgs/home__background.png) fixed center/cover no-repeat;
   color: var(--color-white);
   padding: 40px;
   padding-top: 120px;
@@ -127,7 +139,182 @@ p {
 
 /* section */
 .section {
-  max-width: 1200px;
   text-align: center;
-  margin: 100px 40px;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: 40px;
+  padding: 10px 0;
+  padding-bottom: 80px;
+}
+
+/* About me */
+.about__bubble__container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.about__bubble {
+  width: 40%;
+  font-size: var(--font-medium);
+  background-color: var(--color-grey);
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.bubble1 {
+  left: 10%;
+}
+
+.bubble2 {
+  background-color: var(--color-light-grey);
+  top: 35%;
+  right: 10%;
+}
+
+.bubble3 {
+  margin-bottom: 0;
+  bottom: 0;
+  left: 20%;
+}
+
+.about__description {
+  margin: 40px 0;
+  font-size: var(--font-regular);
+}
+
+.about__majors {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.major {
+  width: 30%;
+}
+
+.major__icon {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  font-size: 70px;
+  color: var(--color-blue);
+  margin: auto;
+  transition: all 300ms ease;
+}
+
+.major__icon:hover {
+  border-color: var(--color-yellow);
+}
+
+.major__icon i {
+  transition: all 300ms ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-yellow);
+  transform: scale(1.2);
+}
+
+.about__schools {
+  text-align: left;
+}
+
+.school {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.school img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.school__name {
+  font-size: var(--font-regular);
+}
+
+.school__period {
+  font-size: var(--font-small);
+  color: #999999;
+  margin-left: 10px;
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.skill__left {
+  width: 40%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 10px 20px 20px 20px;
+}
+
+.skill {
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.skill__bar {
+  height: 5px;
+  background-color: var(--color-ligth-black);
+}
+
+.skill__value {
+  height: 5px;
+  background-color: var(--color-orange);
+}
+
+.skill__middle,
+.skill__right {
+  width: 30%;
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  padding: 10px 20px 20px 20px;
+}
+
+.tools__list,
+.license__list {
+  padding: 0 50px;
+  text-align: left;
+}
+
+.tools__list li,
+.license__list li {
+  margin-bottom: 10px;
+}
+
+.tools__list li i {
+  color: var(--color-orange);
+}
+
+.skill__right {
+  background-color: var(--color-grey);
+  color: var(--color-ligth-black);
+}
+
+.license__list li i {
+  color: var(--color-blue);
 }
