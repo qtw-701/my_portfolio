@@ -118,6 +118,14 @@ p {
   cursor: pointer;
 }
 
+.navbar__toggle-btn {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  position: absolute;
+  right: 16px;
+  display: none;
+}
+
 /* Home */
 #home {
   background: url(imgs/home__background.png) fixed center/cover no-repeat;
@@ -135,6 +143,10 @@ p {
   height: 300px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+}
+
+.home__description {
+  padding: 0 50px;
 }
 
 /* section */
@@ -260,7 +272,7 @@ p {
 }
 
 .skill__left {
-  width: 40%;
+  flex-basis: 40%;
   background-color: var(--color-blue);
   color: var(--color-white);
   padding: 10px 20px 20px 20px;
@@ -289,7 +301,7 @@ p {
 
 .skill__middle,
 .skill__right {
-  width: 30%;
+  flex-basis: 30%;
   background-color: var(--color-dark-grey);
   color: var(--color-white);
   padding: 10px 20px 20px 20px;
@@ -317,4 +329,126 @@ p {
 
 .license__list li i {
   color: var(--color-blue);
+}
+
+/* My work */
+.category__btn {
+  background-color: var(--color-blue);
+  font-size: var(--font-small-title);
+  color: var(--color-white);
+  border-radius: 5px;
+  padding: 5px 30px;
+  box-shadow: 1px 1px 3px var(--color-grey);
+  cursor: pointer;
+}
+
+.work__projects {
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project {
+  width: 30%;
+  height: 400px;
+  background-color: var(--color-grey);
+  border-radius: 10px;
+}
+
+/* Contact Me */
+#contact {
+  background: url(imgs/contact_bg_img.png) center/cover no-repeat;
+  color: var(--color-white);
+}
+
+.contact__dark {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#contact .section__container {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.contact__title {
+  color: var(--color-white);
+}
+
+.contact__link a i {
+  font-size: var(--font-super);
+  transition: all 300ms ease;
+}
+
+.contact__link a:hover i {
+  color: var(--color-yellow);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    /* font-size */
+    --font-super: 32px;
+    --font-large: 24px;
+    --font-medium: 18px;
+    --font-small-title: 16px;
+    --font-regular: 14px;
+    --font-small: 12px;
+  }
+
+  /* Navbar */
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    display: none;
+  }
+
+  .navbar__menu__item {
+    padding: 16px;
+  }
+
+  /* section */
+  .section__container {
+    margin: 20px 16px;
+    padding-bottom: 40px;
+  }
+
+  /* About me */
+  .about__majors {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .major {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Skills */
+  .skillset {
+    flex-direction: column;
+  }
+
+  /* My work */
+  .work__projects {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
 }
