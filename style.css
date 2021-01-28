@@ -384,6 +384,21 @@ p {
   color: var(--color-yellow);
 }
 
+/* Arrow up */
+.arrow-up {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  font-size: var(--font-large);
+  color: var(--color-white);
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   :root {
     /* font-size */
