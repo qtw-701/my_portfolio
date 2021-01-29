@@ -87,13 +87,19 @@ p {
   position: fixed;
   z-index: 1;
   width: 100%;
-  background-color: var(--color-blue);
+  background-color: transparent;
   font-family: var(--font-josefin);
   color: var(--color-white);
   padding: 8px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 300ms ease;
+}
+
+#navbar.navbar__dark {
+  background-color: var(--color-blue);
+  padding: 0 32px;
 }
 
 .navbar__logo {
@@ -116,6 +122,15 @@ p {
 .navbar__menu__item {
   padding: 0 16px;
   cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.navbar__menu__item.active {
+  color: var(--color-yellow);
+}
+
+.navbar__menu__item:hover {
+  color: var(--color-yellow);
 }
 
 .navbar__toggle-btn {
@@ -136,6 +151,7 @@ p {
 
 .home__container {
   text-align: center;
+  opacity: 1;
 }
 
 .profile {
@@ -149,6 +165,23 @@ p {
   padding: 0 50px;
 }
 
+.home__contact {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  font-family: var(--font-josefin);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.home__contact:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+
 /* section */
 .section {
   text-align: center;
@@ -159,10 +192,11 @@ p {
   margin: 40px;
   padding: 10px 0;
   padding-bottom: 80px;
+  margin: auto;
 }
 
 /* About me */
-.about__bubble__container {
+/* .about__bubble__container {
   width: 100%;
   height: 300px;
   position: relative;
@@ -192,7 +226,7 @@ p {
   margin-bottom: 0;
   bottom: 0;
   left: 20%;
-}
+} */
 
 .about__description {
   margin: 40px 0;
@@ -222,7 +256,7 @@ p {
 }
 
 .major__icon:hover {
-  border-color: var(--color-yellow);
+  border-color: var(--color-orange);
 }
 
 .major__icon i {
@@ -230,7 +264,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-yellow);
+  color: var(--color-orange);
   transform: scale(1.2);
 }
 
@@ -257,7 +291,6 @@ p {
 .school__period {
   font-size: var(--font-small);
   color: #999999;
-  margin-left: 10px;
 }
 
 /* Skills */
@@ -292,11 +325,14 @@ p {
 .skill__bar {
   height: 5px;
   background-color: var(--color-ligth-black);
+  overflow: hidden;
 }
 
 .skill__value {
+  width: 100%;
   height: 5px;
   background-color: var(--color-orange);
+  /* transform: translateX(-100%); */
 }
 
 .skill__middle,
@@ -304,7 +340,7 @@ p {
   flex-basis: 30%;
   background-color: var(--color-dark-grey);
   color: var(--color-white);
-  padding: 10px 20px 20px 20px;
+  padding: 10px 10px 20px 10px;
 }
 
 .tools__list,
@@ -396,7 +432,14 @@ p {
   bottom: 40px;
   right: 40px;
   cursor: pointer;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -416,8 +459,13 @@ p {
   }
 
   #navbar {
+    background-color: var(--color-blue);
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px;
+  }
+
+  #navbar.navbar__dark {
     padding: 16px;
   }
 
@@ -426,6 +474,10 @@ p {
     text-align: center;
     margin: auto;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .navbar__menu__item {
@@ -439,6 +491,19 @@ p {
   }
 
   /* About me */
+  .about__bubble__container {
+    height: 300px;
+  }
+
+  .about__bubble {
+    width: 60%;
+  }
+
+  .bubble3 {
+    width: 80%;
+    left: 5%;
+  }
+
   .about__majors {
     padding: 20px 0;
     flex-direction: column;
@@ -447,7 +512,7 @@ p {
 
   .major {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   /* Skills */
@@ -465,5 +530,12 @@ p {
     width: 100%;
     height: 200px;
     margin-bottom: 10px;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
   }
 }
