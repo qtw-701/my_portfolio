@@ -54,6 +54,17 @@ arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
 
+const skills = document.querySelector('#skills');
+const skillValues = document.querySelectorAll('.skill__value');
+const skillsOffset = skills.offsetTop;
+document.addEventListener('scroll', () => {
+  if (skillsOffset - window.scrollY <= 200)
+    skillValues.forEach(item => {
+      const skill = item.dataset.rate;
+      item.style.width = `${skill}%`;
+    });
+});
+
 // 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
