@@ -6,6 +6,10 @@
   --color-dark-grey: #999999;
   --color-grey: #c4c4c4;
   --color-light-grey: #eeeeee;
+  --color-skill: #969696;
+  --color-value: #eb7440;
+  --color-tools: #828282;
+  --color-licenses: #666666;
   --color-blue: #67728c;
   --color-orange: #ffb996;
   --color-yellow: #ffd79b;
@@ -299,72 +303,83 @@ p {
 }
 
 .skillset {
-  display: flex;
-  justify-content: center;
   padding: 0 40px;
 }
 
-.skill__left {
-  flex-basis: 40%;
-  background-color: var(--color-blue);
-  color: var(--color-white);
-  padding: 10px 20px 20px 20px;
+.skill__top {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 .skill {
-  text-align: left;
-  padding-bottom: 20px;
-}
-
-.skill__description {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.skill__img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.skill p {
+  width: 110px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 0 8px;
+}
+
+.skill span {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 0 8px;
 }
 
 .skill__bar {
-  height: 5px;
-  background-color: var(--color-ligth-black);
-  overflow: hidden;
+  width: 100%;
+  height: 10px;
+  background-color: var(--color-skill);
 }
 
 .skill__value {
   width: 0;
-  height: 5px;
-  background-color: var(--color-orange);
-  transition: all 1000ms ease-in;
+  height: 10px;
+  background-color: var(--color-value);
+  transition: all 300ms ease;
 }
 
-.skill__middle,
-.skill__right {
-  flex-basis: 30%;
-  background-color: var(--color-dark-grey);
-  color: var(--color-white);
-  padding: 10px 10px 20px 10px;
-}
-
-.tools__list,
-.license__list {
-  padding: 0 50px;
-  text-align: left;
-}
-
-.tools__list li,
-.license__list li {
-  margin-bottom: 10px;
-}
-
-.tools__list li i {
-  color: var(--color-orange);
-}
-
-.skill__right {
+.skill__bottom {
+  width: 90%;
   background-color: var(--color-grey);
-  color: var(--color-ligth-black);
+  margin: auto;
+  color: var(--color-white);
+  display: flex;
 }
 
-.license__list li i {
-  color: var(--color-blue);
+.skill__bottom .tools {
+  width: 50%;
+  background-color: var(--color-tools);
+  padding-bottom: 16px;
+}
+
+.skill__bottom .licenses {
+  width: 50%;
+  background-color: var(--color-licenses);
+  padding-bottom: 16px;
+}
+
+.skill__bottom .list {
+  width: 50%;
+  margin: auto;
+}
+
+.skill__bottom .list li {
+  text-align: left;
+  padding: 8px;
 }
 
 /* My work */
@@ -513,11 +528,6 @@ p {
   .major {
     width: 100%;
     margin-bottom: 20px;
-  }
-
-  /* Skills */
-  .skillset {
-    flex-direction: column;
   }
 
   /* My work */
