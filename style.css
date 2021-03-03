@@ -15,12 +15,12 @@
   --color-yellow: #ffd79b;
 
   /* font-size */
-  --font-super: 48px;
-  --font-large: 32px;
-  --font-medium: 24px;
-  --font-small-title: 18px;
-  --font-regular: 16px;
-  --font-small: 14px;
+  --font-super: 3rem;
+  --font-large: 2rem;
+  --font-medium: 1.5rem;
+  --font-small-title: 1.125rem;
+  --font-regular: 1rem;
+  --font-small: 0.875rem;
 
   /* font-weight */
   --weight-bold: 700;
@@ -94,7 +94,7 @@ p {
   background-color: transparent;
   font-family: var(--font-josefin);
   color: var(--color-white);
-  padding: 8px 32px;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +103,7 @@ p {
 
 #navbar.navbar__dark {
   background-color: var(--color-blue);
-  padding: 0 32px;
+  padding: 0 2rem;
 }
 
 .navbar__logo {
@@ -115,7 +115,7 @@ p {
 
 .navbar__logo i {
   color: var(--color-yellow);
-  padding-right: 10px;
+  padding-right: 0.625rem;
 }
 
 .navbar__menu {
@@ -124,7 +124,7 @@ p {
 }
 
 .navbar__menu__item {
-  padding: 0 16px;
+  padding: 0 1rem;
   cursor: pointer;
   transition: all 300ms ease;
 }
@@ -141,7 +141,7 @@ p {
   color: var(--color-white);
   font-size: var(--font-medium);
   position: absolute;
-  right: 16px;
+  right: 1rem;
   display: none;
 }
 
@@ -149,8 +149,8 @@ p {
 #home {
   background: url(imgs/home__background.png) fixed center/cover no-repeat;
   color: var(--color-white);
-  padding: 40px;
-  padding-top: 120px;
+  padding: 2.5rem;
+  padding-top: 7.5rem;
 }
 
 .home__container {
@@ -166,7 +166,7 @@ p {
 }
 
 .home__description {
-  padding: 0 50px;
+  padding: 0 3.125rem;
 }
 
 .home__contact {
@@ -176,8 +176,8 @@ p {
   color: var(--color-white);
   border: 2px solid var(--color-white);
   border-radius: 5px;
-  margin: 20px 0;
-  padding: 10px 20px;
+  margin: 1.25rem 0;
+  padding: 0.625rem 1.25rem;
   cursor: pointer;
 }
 
@@ -193,52 +193,20 @@ p {
 
 .section__container {
   max-width: 1200px;
-  margin: 40px;
-  padding: 10px 0;
-  padding-bottom: 80px;
+  margin: 2.5rem;
+  padding: 0.625rem 0;
+  padding-bottom: 5rem;
   margin: auto;
 }
 
 /* About me */
-/* .about__bubble__container {
-  width: 100%;
-  height: 300px;
-  position: relative;
-}
-
-.about__bubble {
-  width: 40%;
-  font-size: var(--font-medium);
-  background-color: var(--color-grey);
-  margin-bottom: 20px;
-  padding: 30px;
-  border-radius: 10px;
-  position: absolute;
-}
-
-.bubble1 {
-  left: 10%;
-}
-
-.bubble2 {
-  background-color: var(--color-light-grey);
-  top: 35%;
-  right: 10%;
-}
-
-.bubble3 {
-  margin-bottom: 0;
-  bottom: 0;
-  left: 20%;
-} */
-
 .about__description {
-  margin: 40px 0;
+  margin: 2.5rem 0;
   font-size: var(--font-regular);
 }
 
 .about__majors {
-  padding: 40px 0;
+  padding: 2.5rem 0;
   display: flex;
   justify-content: space-around;
 }
@@ -253,7 +221,7 @@ p {
   line-height: 200px;
   border: 1px solid var(--color-blue);
   border-radius: 50%;
-  font-size: 70px;
+  font-size: 4.375rem;
   color: var(--color-blue);
   margin: auto;
   transition: all 300ms ease;
@@ -279,13 +247,13 @@ p {
 .school {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .school img {
   width: 60px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .school__name {
@@ -303,13 +271,13 @@ p {
 }
 
 .skillset {
-  padding: 0 40px;
+  padding: 0 2.5rem;
 }
 
 .skill__top {
   width: 90%;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .skill {
@@ -317,7 +285,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 0;
+  margin: 1rem 0;
 }
 
 .skill__img {
@@ -330,13 +298,13 @@ p {
   width: 110px;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  margin: 0 8px;
+  margin: 0 0.5rem;
 }
 
 .skill span {
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  margin: 0 8px;
+  margin: 0 0.5rem;
 }
 
 .skill__bar {
@@ -363,13 +331,13 @@ p {
 .skill__bottom .tools {
   width: 50%;
   background-color: var(--color-tools);
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 
 .skill__bottom .licenses {
   width: 50%;
   background-color: var(--color-licenses);
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 
 .skill__bottom .list {
@@ -388,14 +356,14 @@ p {
   font-size: var(--font-small-title);
   color: var(--color-white);
   border-radius: 5px;
-  padding: 5px 30px;
+  padding: 0.5rem 2rem;
   box-shadow: 1px 1px 3px var(--color-grey);
   cursor: pointer;
 }
 
 .work__projects {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: space-around;
 }
@@ -419,7 +387,7 @@ p {
 
 #contact .section__container {
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .contact__title {
@@ -444,8 +412,8 @@ p {
   font-size: var(--font-large);
   color: var(--color-white);
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 2.5rem;
+  right: 2.5rem;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -460,12 +428,12 @@ p {
 @media screen and (max-width: 768px) {
   :root {
     /* font-size */
-    --font-super: 32px;
-    --font-large: 24px;
-    --font-medium: 18px;
-    --font-small-title: 16px;
-    --font-regular: 14px;
-    --font-small: 12px;
+    --font-super: 2rem;
+    --font-large: 1.5rem;
+    --font-medium: 1.125rem;
+    --font-small-title: 1rem;
+    --font-regular: 0.875rem;
+    --font-small: 0.75rem;
   }
 
   /* Navbar */
@@ -477,11 +445,11 @@ p {
     background-color: var(--color-blue);
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
+    padding: 1rem;
   }
 
   #navbar.navbar__dark {
-    padding: 16px;
+    padding: 1rem;
   }
 
   .navbar__menu {
@@ -496,13 +464,13 @@ p {
   }
 
   .navbar__menu__item {
-    padding: 16px;
+    padding: 1rem;
   }
 
   /* section */
   .section__container {
-    margin: 20px 16px;
-    padding-bottom: 40px;
+    margin: 0.125rem 1rem;
+    padding-bottom: 2.5rem;
   }
 
   /* About me */
@@ -520,14 +488,14 @@ p {
   }
 
   .about__majors {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     flex-direction: column;
     align-items: center;
   }
 
   .major {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   /* My work */
@@ -539,13 +507,13 @@ p {
   .project {
     width: 100%;
     height: 200px;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
 
   .arrow-up {
     width: 50px;
     height: 50px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    right: 1.25rem;
   }
 }
