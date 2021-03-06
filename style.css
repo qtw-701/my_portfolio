@@ -295,7 +295,7 @@ p {
 }
 
 .skill p {
-  width: 110px;
+  width: 20%;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 0 0.5rem;
@@ -545,6 +545,10 @@ p {
   }
 
   /* skills */
+  .skillset {
+    padding: 0.5rem;
+  }
+
   .skill__bottom {
     flex-direction: column;
   }
