@@ -163,6 +163,7 @@ p {
   height: 300px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+  animation: 2s filp;
 }
 
 .home__description {
@@ -469,6 +470,18 @@ p {
 .arrow-up.visible {
   pointer-events: auto;
   opacity: 1;
+}
+
+@keyframes filp {
+  from {
+    opacity: 0;
+    transform: rotateY(180deg) translateY(25%);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
 }
 
 @media screen and (max-width: 768px) {
